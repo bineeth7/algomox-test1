@@ -1,0 +1,28 @@
+---
+{{- range $idx,$item := .}}
+- id: {{$item.ID}}
+  identifiers:
+  {{- range $iid,$iitem := .Identifiers}}
+  - identifier: '{{$iitem.Identifier}}'
+    scheme: {{$iitem.Scheme}}
+  {{- end}}
+  links:
+  {{- range .Links}}
+    - note: {{.Note}}
+      url: {{.URL}}
+  {{- end }}
+  name: {{.Name}}
+  other_names: []
+  superseded_by: {{if .SupersededBy}}{{.SupersededBy}}{{else}}null{{end}}
+  keywords:
+  {{- range .Keywords}}
+    - {{ . -}}
+  {{- end}}
+  text:
+  {{- range .Text}}
+    - media_type: {{.MediaType}}
+      title: {{.Title}}
+      url: {{.URL}}
+  {{end -}}
+{{- end -}}
+---
