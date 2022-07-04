@@ -1,9 +1,11 @@
 package main
 
 import (
+	//"net/http"
+	"fmt"
+	"io/ioutil"
 	"bytes"
 	"encoding/json"
-	"io/ioutil"
 	"log"
 	"os"
 	"text/template"
@@ -34,11 +36,20 @@ type Text struct {
 }
 
 func main() {
-	log.Println("Hello")
+	fmt.Println("Hello") //log.Println("Hello")
+    // fmt.Printf("Starting server at port 8080\n")
+    // http.ListenAndServe(":8080", nil)
+	//setupRoutes()
 	l := ReadData()
 	WritetoYaml(l)
 
 }
+
+
+// func setupRoutes(){
+// 	http.HandleFunc("/upload",Createfile)
+// 	http.ListenAndServe(":8080",nil)
+// }
 
 // Createfile reads the filename from the UI
 func Createfile() error {
