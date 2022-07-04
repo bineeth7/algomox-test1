@@ -33,3 +33,14 @@
     font-weight: bold;
     color: #000000;
 }
+input[type=submit] {
+    padding:5px 15px; 
+    background:rgb(255, 255, 255); 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+#btn:hover {
+        background-color: rgb(175, 227, 243)
+      }
