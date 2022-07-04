@@ -36,7 +36,8 @@ type Text struct {
 }
 
 func main() {
-	fmt.Println("Hello") //log.Println("Hello")
+	fmt.Println("Hello") 
+	//To create server
     // fmt.Printf("Starting server at port 8080\n")
     // http.ListenAndServe(":8080", nil)
 	//setupRoutes()
